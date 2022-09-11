@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Darren Melroy Menezes">
+    <meta name="description" content="Reservation Page of Little Lemon restaurant">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../assets/stylesheets/styles.css">
+    <link rel="stylesheet" href="./../assets/stylesheets/form-styles.css">
+    <title>Reserve</title>
+</head>
+<body>
+    <header>
+        <img src="./../assets/images/logos/Asset 16@4x.png" alt="Little Lemon logo">
+    </header>
+    <nav>
+        <ul>
+            <li><a class="nav" href="./../index.html">Homepage</a></li>
+            <li><a class="nav" href="./../pages/menu.html">Menu</a></li>
+            <li><a class="nav" href="./../pages/book.html">Reserve</a></li>
+            <li><a class="nav" href="./../pages/about.html">About</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="form">
+            <article class="form">
+                <form action="#" method="post">
+                    <div class="form-group input-1">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="name" required />
+                        <label class="form-control-label" for="name">Name</label>
+                    </div>
+                    <div class="form-group input-2">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="email" required />
+                        <label class="form-control-label" for="email">E-Mail</label>
+                    </div>
+                    <div class="form-group input-3">
+                        <input type="datetime-local" class="form-control" id="datetime" name="datetime" placeholder="Reservation Time" required />
+                        <label class="form-control-label" for="datetime">Date Time</label>
+                    </div>
+                    <div class="form-group input-4">
+                        <input type="text" class="form-control" id="coupon" name="coupon" placeholder="A valid coupon code" maxlength="5" pattern="[A-Z]{3}[0-9]{2}" />
+                        <label class="form-control-label" for="coupon">Coupon code</label>
+                    </div>
+                    <div class="form-group input-5">
+                        <input type="number" class="form-control" id="people" name="people" placeholder="Number of people (1-10)" min="1" max="10" value="2" onchange="show_value(this.value);" required />
+                        <label class="form-control-label" for="people">Number of people:</label>
+                    </div>
+                    <div class="form-group input-6">
+                        <button type="submit" id="submit">Submit</button>
+                        <!-- <label class="form-control-label" for="submit">Number of people:</label> -->
+                    </div>
+                </form>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div class="img">
+            <p class="footer-logo" >
+                <img src="../assets/images/logos/Asset 16@4x.png" alt="Little Lemon logo">
+            </p>
+        </div>
+        <div class="copyright">
+            <p>
+                <h4>Copyright</h4>
+                The content and material used in this website<br>
+                 are property of Little Lemon.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

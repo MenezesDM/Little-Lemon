@@ -1,0 +1,217 @@
+/* https://stackoverflow.com/questions/22898559/why-is-h2-larger-than-h1 */
+
+* {
+    /* border: 1px solid black; */
+    margin: 0.25rem 0.25rem;
+    padding: 0%;
+}
+
+html {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: rgb(130, 118, 63);
+    font-family: "Markazi Text", serif;
+    margin: 3rem 5%;
+}
+
+header > img {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+nav ul {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #005555;
+    list-style: none;
+    text-align: center;
+}
+
+/* nav > ul > li {
+    background-color: saddlebrown;
+} */
+
+a , a::after {
+    text-decoration: none;
+    color: darkgray;
+}
+
+a.nav, a.nav::after {
+    color: white;
+}
+
+a.nav:active {
+    color: yellow;
+}
+
+section.banner {
+    text-align: center;
+}
+
+section {
+    height: fit-content;
+}
+
+article {
+    padding: 0.5rem 0.5rem;
+    margin: 1rem 1rem;
+    /* text-align: center; */
+    display: grid;
+    background-color: #E8C517;
+    grid-template-rows: "div"
+    "h2"
+    "p";
+}
+
+article:hover {
+    transform: scale(1.005);
+    box-shadow: 2px 2px 5px black;
+}
+
+article.banner{
+    padding: 2rem 0.5rem;
+    display: grid;
+    margin: 1rem 1rem 0rem 1rem;
+    background-color: #E8C517;
+    grid-template-rows: "div"
+                        "h2"
+                        "p";
+}
+article > div {
+    text-align: center;
+    height: 50%;
+    vertical-align: cen;
+}
+
+article > div > img {
+    width: 95%;
+}
+
+article > p {
+    height: fit-content;
+
+}
+
+article > p > span {
+    padding: 2rem;
+    margin-left: 2rem;
+}
+
+article > h2, article > h3{
+    padding: 0.5rem;
+    color: floralwhite;
+    background-color: #005555;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+}
+
+article > p > a {
+    color: #005555;
+}
+
+footer {
+    text-align: center;
+    background-color: #005555;
+    margin: 0 1.5rem;
+}
+
+footer img {
+    /* margin: 1rem; */
+    width: 70%;
+    margin: 0; 
+    background-color: white;
+    padding: 1rem;
+}
+.footer-logo {
+    padding: 1rem;
+}
+.copyright {
+    padding-top: 1rem;
+    color: white;
+    padding-bottom: 1rem;
+}
+
+form > div{
+    display: grid;
+    grid-template-areas: "label label"
+                         "name name"
+                         "label label"
+                         "date date"
+                         "label label"
+                         "range" "span"
+                         "label label"
+                         "email email"
+                         "label label"
+                         "coupon coupon"
+                         "submit submit";
+    min-width: 80%;
+}
+
+/* h3{
+    padding: 0;
+    margin: 0;
+    padding: 0.25rem;
+    margin: 0.25rem;
+    font-size: 1.17em; 
+}  */
+
+@media only screen and (min-width: 720px) {
+    nav ul {
+        display: grid;
+        grid-template-areas: "li li li li";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    section.blog {
+        display: grid;
+        grid-template-areas: "article article article";
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    section.team {
+        display: grid;
+        grid-template-areas: "article article";
+        grid-template-columns: 1fr 1fr;
+    }
+
+    article.cen {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* article.cen > h3 {
+        padding: 0;
+    } */
+    
+    article.cen > div > img {
+        padding: none;
+    }
+
+    article.cen > p {
+        margin-top: 1rem;
+    }
+
+    footer {
+        display: grid;
+        grid-template-areas: "div div.copyright";
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .copyright {
+        padding-top: 10%;
+        padding-right: 6%;
+        padding-bottom: 6%;
+    }
+
+    form > div {
+        min-width: 50%;
+    }
+    
+}
